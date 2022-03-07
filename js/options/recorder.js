@@ -79,9 +79,9 @@ window.options.recorder = {
       mediaRecorder.stop()
       stream.getVideoTracks()[0].stop()
     })
-    async function startRecording () {
+    async function startRecording (displayMediaOptions) {
       stream = await navigator.mediaDevices.getDisplayMedia({
-        video: { mediaSource: 'canvas2d' }
+        video: 'screen'
       })
       return stream
     }
